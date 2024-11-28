@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 
 import com.project.users.entities.Role;
 import com.project.users.entities.User;
@@ -13,9 +15,9 @@ import com.project.users.service.UserService;
 import jakarta.annotation.PostConstruct;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class UsersMicroserviceApplication {
-	
-	
+
 	@Autowired
 	UserService userService;
 
